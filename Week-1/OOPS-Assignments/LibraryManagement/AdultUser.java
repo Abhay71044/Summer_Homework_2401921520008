@@ -11,7 +11,7 @@ class AdultUser implements LibraryUser {
             System.out.println("Sorry, Age must be greater than 12 to register as an adult");
         }
     }
-
+ 
     @Override
     public void requestBook() {
         if (bookType.equals("Fiction")) {
