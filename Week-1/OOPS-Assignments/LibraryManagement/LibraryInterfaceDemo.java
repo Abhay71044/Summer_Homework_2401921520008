@@ -1,47 +1,92 @@
+interface LibraryUser {
+    void registerAccount();
+    void requestBook();
+}
+
+class KidUser implements LibraryUser {
+
+    int age;
+    String bookType;
+
+    public void registerAccount() {
+        if(age < 12) {
+            System.out.println("You have successfully registered under a Kids Account");
+        }
+        else {
+            System.out.println("Sorry, Age must be less than 12 to register as a kid");
+        }
+    }
+
+    public void requestBook() {
+        if(bookType.equals("Kids")) {
+            System.out.println("Book Issued successfully, please return the book within 10 days");
+        }
+        else {
+            System.out.println("Oops, you are allowed to take only kids books");
+        }
+    }
+}
+
+class AdultUser implements LibraryUser {
+
+    int age;
+    String bookType;
+
+    public void registerAccount() {
+        if(age > 12) {
+            System.out.println("You have successfully registered under an Adult Account");
+        }
+        else {
+            System.out.println("Sorry, Age must be greater than 12 to register as an adult");
+        }
+    }
+
+    public void requestBook() {
+        if(bookType.equals("Fiction")) {
+            System.out.println("Book Issued successfully, please return the book within 7 days");
+        }
+        else {
+            System.out.println("Oops, you are allowed to take only adult Fiction books");
+        }
+    }
+}
+
 public class LibraryInterfaceDemo {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
 
-        System.out.println("===== Kid User Tests =====");
+        KidUser k = new KidUser();
 
-        KidUser kid = new KidUser();
+        System.out.println("Kid User Test");
 
-        // Age = 10
-        kid.age = 10;
-        kid.registerAccount();
+        k.age = 10;
+        k.registerAccount();
 
-        // Age = 18
-        kid.age = 18;
-        kid.registerAccount();
+        k.age = 18;
+        k.registerAccount();
 
-        // Book = Kids
-        kid.bookType = "Kids";
-        kid.requestBook();
+        k.bookType = "Kids";
+        k.requestBook();
 
-        // Book = Fiction
-        kid.bookType = "Fiction";
-        kid.requestBook();
+        k.bookType = "Fiction";
+        k.requestBook();
 
         System.out.println();
 
-        System.out.println("===== Adult User Tests =====");
+        AdultUser a = new AdultUser();
 
-        AdultUser adult = new AdultUser();
+        System.out.println("Adult User Test");
 
-        // Age = 5
-        adult.age = 5;
-        adult.registerAccount();
+        a.age = 5;
+        a.registerAccount();
 
-        // Age = 23
-        adult.age = 23;
-        adult.registerAccount();
+        a.age = 23;
+        a.registerAccount();
 
-        // Book = Kids
-        adult.bookType = "Kids";
-        adult.requestBook();
+        a.bookType = "Kids";
+        a.requestBook();
 
-        // Book = Fiction
-        adult.bookType = "Fiction";
-        adult.requestBook();
+        a.bookType = "Fiction";
+        a.requestBook();
     }
-} 
+}
