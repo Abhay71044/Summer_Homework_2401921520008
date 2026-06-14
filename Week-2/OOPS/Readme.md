@@ -1,7 +1,7 @@
 # Week 2 - Day 6
 
 ## Objective
-To implement Interface in Java using different musical instruments.
+To understand Interfaces, Packages and Polymorphism in Java.
 
 ## Interface
 - Playable
@@ -13,7 +13,8 @@ To implement Interface in Java using different musical instruments.
 
 ## Concepts Used
 - Interface
-- Class and Object
+- Packages
+- Implements Keyword
 - Polymorphism
 - Method Overriding
 
