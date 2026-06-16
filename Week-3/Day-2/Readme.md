@@ -15,7 +15,7 @@ Space Complexity: O(1)
 - Calculated the length of the linked list.
 - Removed the required node using its position from the beginning.
 
-Time Complexity: O(n) 
+Time Complexity: O(n)
 Space Complexity: O(1)
 
 ### 3. Palindrome Linked List
