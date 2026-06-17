@@ -8,7 +8,7 @@ Today I solved 3 Stack-based problems from LeetCode.
 - Used a stack to store opening brackets.
 - Checked whether each closing bracket matches the top of the stack.
 
-Time Complexity: O(n)
+Time Complexity: O(n) 
 Space Complexity: O(n)
 
 ### 2. Min Stack
